@@ -1,0 +1,515 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+  :root {
+    --h1-font-size: 3rem;
+    /* Adjusted from 10vw */
+    --h2-font-size: 2.75rem;
+    /* Adjusted from 9vw */
+    --h3-font-size: 2.5rem;
+    /* Adjusted from 8vw */
+    --h4-font-size: 2.25rem;
+    /* Adjusted from 7vw */
+    --h5-font-size: 2rem;
+    /* Adjusted from 6vw */
+    --h6-font-size: 1.75rem;
+    /* Adjusted from 5vw */
+    --p-font-size: 1.25rem;
+    /* Adjusted from 4vw */
+    --a-font-size: 2rem;
+    /* Adjusted from 2vw */
+    --i-font-size: 2.25rem;
+    /* Adjusted from 7vw */
+    --btn-font-size: 2rem;
+    /* Adjusted from 5vw */
+  }
+
+  @media (max-width: 576px) {
+    :root {
+      --h1-font-size: 2.5rem;
+      --h2-font-size: 2.25rem;
+      --h3-font-size: 2rem;
+      --h4-font-size: 1.75rem;
+      --h5-font-size: 1.5rem;
+      --h6-font-size: 1.25rem;
+      --p-font-size: 1rem;
+      --a-font-size: 1.5rem;
+      --i-font-size: 1.75rem;
+      --btn-font-size: 1.75rem;
+    }
+
+    .responsive-logo {
+      max-height: 100px;
+    }
+
+    .input-group-text i {
+      font-size: 1rem;
+      /* Reduce el tamaño del ícono */
+    }
+
+    .form-label {
+      font-size: 0.9rem;
+      /* Reduce el tamaño del label */
+    }
+
+    .placeholder-fix::placeholder {
+      font-size: 0.9rem;
+    }
+
+    .iconos {
+      font-size: 1.5rem;
+    }
+
+    .iconos-boton {
+      font-size: 2.5rem;
+    }
+
+    #logo-ingreso {
+    max-width: 12rem;
+    }
+
+    .olvide-contraseña,
+    .terminos-condiciones {
+      font-size: 1.5rem;
+    }
+  }
+
+
+  /* Tablets (pantallas medianas) */
+  @media (min-width: 768px) {
+    :root {
+      --h1-font-size: 4rem;
+      --h2-font-size: 3.5rem;
+      --h3-font-size: 2rem;
+      --h4-font-size: 2.5rem;
+      --h5-font-size: 2rem;
+      --h6-font-size: 1.8rem;
+      --p-font-size: 1.5rem;
+      --a-font-size: 1.4rem;
+      --i-font-size: 2rem;
+      --btn-font-size: 2rem;
+    }
+
+    .responsive-title {
+      font-size: 2rem;
+      color: #57C0BF;
+    }
+  }
+
+  /* Pantallas grandes (laptops y monitores) */
+  @media (min-width: 992px) {
+    :root {
+      --h1-font-size: 3.5rem;
+      --h2-font-size: 3rem;
+      --h3-font-size: 2.5rem;
+      --h4-font-size: 2rem;
+      --h5-font-size: 1.8rem;
+      --h6-font-size: 1.5rem;
+      --p-font-size: 1.2rem;
+      --a-font-size: 1.5rem;
+      --i-font-size: 1.5rem;
+      --btn-font-size: 1.5rem;
+    }
+
+    .responsive-title {
+      font-size: 2.5rem;
+      color: #57C0BF;
+    }
+
+    .input-group-text i {
+      font-size: 1.2rem;
+      /* Aumenta el tamaño del ícono */
+    }
+
+    .form-label {
+      font-size: 1rem;
+      /* Hace el label más visible */
+    }
+
+    .placeholder-fix::placeholder {
+      font-size: 1rem;
+    }
+
+    .iconos {
+      font-size: 2.2rem;
+    }
+
+    .iconos-boton {
+      font-size: 3.5rem;
+    }
+  }
+
+  /* Pantallas extra grandes */
+  @media (min-width: 1200px) {
+    :root {
+      --h1-font-size: 3rem;
+      --h2-font-size: 2.5rem;
+      --h3-font-size: 2rem;
+      --h4-font-size: 1.8rem;
+      --h5-font-size: 1.5rem;
+      --h6-font-size: 1.2rem;
+      --p-font-size: 1rem;
+      --a-font-size: 0.9rem;
+      --i-font-size: 1rem;
+      --btn-font-size: 1.2rem;
+    }
+    #logo-ingreso {
+    max-width: 18rem;
+  }
+
+  .olvide-contraseña,
+  .terminos-condiciones {
+    font-size: 2rem;
+  }
+  }
+
+  /* Ajustar tamaño del texto dinámicamente */
+  .responsive-title {
+    font-size: 2rem;
+    color: #57C0BF;
+  }
+
+
+  /* Hacer que el logo se adapte */
+  .responsive-logo {
+    max-height: 180px;
+    width: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: -1px;
+  }
+
+  h1 {
+    font-size: var(--h1-font-size);
+    letter-spacing: -2px;
+  }
+
+  h2 {
+    font-size: var(--h2-font-size);
+    letter-spacing: -2px;
+  }
+
+  h3 {
+    font-size: var(--h3-font-size);
+  }
+
+  h4 {
+    font-size: var(--h4-font-size);
+    margin-bottom: 10px;
+    justify-content: justify;
+  }
+
+  h5 {
+    font-size: var(--h5-font-size);
+  }
+
+  h6 {
+    font-size: var(--h6-font-size);
+  }
+
+  p {
+    font-size: var(--p-font-size);
+    margin-bottom: 10px;
+    justify-content: justify;
+  }
+
+  i {
+    font-size: var(--i-font-size);
+    justify-content: justify;
+  }
+
+  a {
+    font-size: var(--a-font-size);
+    margin-bottom: 10px;
+    justify-content: justify;
+  }
+
+  ul li {
+    font-size: var(--p-font-size);
+  }
+
+  .nav-item .nav-link {
+    color: white !important;
+    /* Makes text white always */
+    background-color: #9e287b;
+  }
+
+  .nav-item .nav-link.active {
+    color: #9e287b !important;
+  }
+
+  .form-check {
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .input-group-text {
+    font-size: 1.8rem;
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+
+  .recordar-uyc {
+    font-size: 1rem;
+  }
+
+  .btn-ver-turno{
+    font-size: 2rem;
+  }
+
+  #form-check-label {
+    font-size: 1rem;
+  }
+
+
+  #card-ingreso {
+    margin-top: 80px;
+    height: auto;
+  }
+
+  #cuerpo {
+    background: rgb(142, 213, 210);
+    background: -moz-linear-gradient(90deg, rgba(142, 213, 210, 1) 0%, rgba(87, 193, 191, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(142, 213, 210, 1) 0%, rgba(87, 193, 191, 1) 100%);
+    background: linear-gradient(90deg, rgba(142, 213, 210, 1) 0%, rgba(87, 193, 191, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8ed5d2", endColorstr="#57c1bf", GradientType=1);
+    height: 100vh;
+    font-family: Quicksand;
+  }
+
+  #logo-ingreso {
+    max-width: 15rem;
+    /* Adjusted from 35vw */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center horizontally */
+  }
+
+  .olvide-contraseña,
+  .terminos-condiciones {
+    font-size: 1.75rem;
+    /* Adjusted from 5vw */
+  }
+
+  .contain {
+    object-fit: contain;
+  }
+
+  .inputs {
+    font-size: 4vw;
+  }
+
+  .barra-botones {
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    /* Usar flexbox */
+    justify-content: center;
+    /* Centrar los botones horizontalmente */
+    align-items: center;
+    /* Asegurar alineación vertical */
+    gap: 0.1vw;
+    /* Espaciado uniforme entre botones */
+  }
+
+  #barra-usuario {
+    background-color: white;
+    width: 100vw;
+    padding: 1vw;
+    margin: 0px;
+    font-size: 2rem;
+    z-index: 10000;
+
+  }
+
+  #caja-principal {
+    width: 100%;
+  }
+
+  .iconos {
+    font-size: 2rem;
+  }
+
+  .iconos-boton {
+    font-size: 3rem;
+  }
+
+  .whatsapp {
+    color: #25D366;
+    cursor: pointer;
+  }
+
+  .ubicacion {
+    color: red;
+    cursor: pointer;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: var(--btn-font-size);
+  }
+
+  #btn-login {
+    font-size: 1rem;
+  }
+
+  .boton {
+    background-color: white;
+    border-color: white;
+    color: black;
+  }
+
+  #sedes {
+    font-size: 4vw;
+    background-color: white;
+    padding: 1vw;
+    border-radius: 1vw;
+    padding: 2.5vw;
+    position: relative;
+    box-shadow: 1px 1px 5px grey;
+    top: 10vh;
+    width: 85vw;
+    margin: auto;
+  }
+
+  .videos {
+    border-radius: 10px;
+    width: 99%;
+    height: 50%
+  }
+
+  #caja-videos {
+    width: 100vw;
+    height: 85vh;
+    position: absolute;
+    top: 15vh;
+    background-color: white;
+    margin: auto;
+    font-size: 2rem;
+  }
+
+  #caja-turnos {
+    width: 100vw;
+    height: 85vh;
+    position: absolute;
+    top: 15vh;
+    background-color: white;
+    margin: auto;
+    font-size: 2rem;
+  }
+
+  #logo-ppal {
+    max-width: 15rem;
+    /* Adjusted from 20vw */
+    position: absolute;
+    /* Fixed incorrect `position: left;` */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center horizontally */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  /* Fix placeholder text size and alignment */
+  .placeholder-fix::placeholder {
+    font-size: 1rem;
+    /* Adjust font size */
+    color: #6c757d;
+    /* Match Bootstrap's default muted color */
+    opacity: 1;
+    /* Ensure it's fully visible */
+  }
+
+  .placeholder-fix {
+    padding: 0.5rem 0.75rem;
+    /* Standard Bootstrap input padding */
+  }
+
+  #caja-carga-fondo{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  #caja-carga-spinner{
+    position: absolute;
+    top: 35vh;
+    left: 45vw;
+  }
+
+  -webkit-locale: "es";
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:;
+  --tw-pan-y:;
+  --tw-pinch-zoom:;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:;
+  --tw-slashed-zero:;
+  --tw-numeric-figure:;
+  --tw-numeric-spacing:;
+  --tw-numeric-fraction:;
+  --tw-ring-inset:;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / .5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:;
+  --tw-brightness:;
+  --tw-contrast:;
+  --tw-grayscale:;
+  --tw-hue-rotate:;
+  --tw-invert:;
+  --tw-saturate:;
+  --tw-sepia:;
+  --tw-drop-shadow:;
+  --tw-backdrop-blur:;
+  --tw-backdrop-brightness:;
+  --tw-backdrop-contrast:;
+  --tw-backdrop-grayscale:;
+  --tw-backdrop-hue-rotate:;
+  --tw-backdrop-invert:;
+  --tw-backdrop-opacity:;
+  --tw-backdrop-saturate:;
+  --tw-backdrop-sepia:;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+</style>
